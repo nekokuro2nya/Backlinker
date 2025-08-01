@@ -11,9 +11,9 @@ try:
                                               Hedula - hedula.com     
   """)
   if (sys.version_info.major == 3):
-    site = input(" => Backlink Kasilcak Site\t: ")
+    site = input(" => 輸入反向連結\t: ")
   else:
-    site = raw_input(" => Backlink Kasilcak Site\t: ")
+    site = raw_input(" => 輸入反向連結\t: ")
   with open("urlbacklinks.json", "r") as file:
     data = json.loads(file.read())
     for backlink in data:
@@ -24,6 +24,6 @@ try:
         sys.exit()
       except:
         r = "time out"
-      print(site + " => Backlink Eklendi ==> "+re.search(r'http://.*?/', url).group(0).replace("/", "").replace("http:","") + " status: "+str(r))
+      print(site + " => 反向連結 ==> "+re.search(r'http://.*?/', url).group(0).replace("/", "").replace("http:","") + " 狀態： "+str(r))
 except:
   print("\n\n => exit\n")
