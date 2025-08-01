@@ -1,14 +1,14 @@
 import json,requests,re,sys
 
 try:
-  print("""
+  print(r"""
             _ ____             _    _ _       _             
            | |  _ \           | |  | (_)     | |            
  _   _ _ __| | |_) | __ _  ___| | _| |_ _ __ | | _____ _ __ 
 | | | | '__| |  _ < / _` |/ __| |/ / | | '_ \| |/ / _ \ '__|
 | |_| | |  | | |_) | (_| | (__|   <| | | | | |   <  __/ |   
  \__,_|_|  |_|____/ \__,_|\___|_|\_\_|_|_| |_|_|\_\___|_|   
-                                              H4-cklinker - wmdark.com     
+                                              Hedula - hedula.com     
   """)
   if (sys.version_info.major == 3):
     site = input(" => Backlink Kasilcak Site\t: ")
@@ -24,6 +24,6 @@ try:
         sys.exit()
       except:
         r = "time out"
-      print(site + " => Backlink Eklendi ==> "+re.search('http:\/\/.*?\/', url).group(0).replace("/", "").replace("http:","") + " status: "+str(r))
+      print(site + " => Backlink Eklendi ==> "+re.search(r'http://.*?/', url).group(0).replace("/", "").replace("http:","") + " status: "+str(r))
 except:
   print("\n\n => exit\n")
